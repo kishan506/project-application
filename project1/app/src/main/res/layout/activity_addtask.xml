@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/colorBackground"
+    tools:context=".activites.MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <!-- Title -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:boxStrokeWidth="2dp"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Description -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDescription"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="Description"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Starting Date -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilStartDate"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Starting Date"
+        android:focusable="false"
+        android:onClick="openStartDatePicker"
+        android:textColor="@android:color/black"
+
+        app:boxStrokeColor="@color/colorPrimary"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Ending Date -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEndDate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Ending Date"
+        android:focusable="false"
+        android:onClick="openEndDatePicker"
+        app:boxStrokeColor="@color/colorPrimary"
+        android:gravity="center"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Priority Dropdown -->
+    <Spinner
+        android:id="@+id/spinnerPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:entries="@array/priorityarray"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="8dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/addUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Users"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"/>
+
+    <!-- RecyclerView -->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:background="@color/colorPrimary"/>-->
+
+    <!-- Save and Reset Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonSave"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:onClick="onSaveClick"/>
+
+        <Button
+            android:id="@+id/buttonReset"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@android:color/white"
+            android:onClick="onResetClick"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activites.MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <!-- Form Container -->
+    <LinearLayout
+        android:id="@+id/container"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTitle"
+            android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            app:hintTextColor="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTitle"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Description -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDescription"
+            android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Description"
+            app:hintTextColor="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Starting Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilStartDate"
+            android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:hint="Starting Date"
+            android:onClick="openStartDatePicker"
+            app:hintTextColor="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextStartDate"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Ending Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEndDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:hint="Ending Date"
+            android:onClick="openEndDatePicker"
+            app:hintTextColor="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEndDate"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Priority Dropdown -->
+        <Spinner
+            android:id="@+id/spinnerPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:backgroundTint="@color/colorPrimary"
+            android:entries="@array/priorityarray"
+            android:padding="8dp"
+            android:popupBackground="@color/colorPrimaryDark" />
+
+        <!-- Horizontal LinearLayout for Status TextView and RadioGroup -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <!-- Text View for Status -->
+
+            <!-- Radio Group for Status -->
+
+        </LinearLayout>
+
+        <!-- Show Users Button -->
+        <Button
+            android:id="@+id/addUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Show Users"
+            android:textColor="@android:color/white" />
+
+        <!-- Update and Reset Buttons -->
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonUpdate"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:onClick="onUpdateClick"
+                android:text="Update"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/buttonReset"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
+                android:onClick="onResetClick"
+                android:text="Reset"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Complete Button -->
+        <Button
+            android:id="@+id/buttonComplete"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonLayout"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF3DB63D"
+            android:onClick="onCompleteClick"
+            android:text="Complete"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChat"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@android:drawable/sym_action_chat"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_anchorGravity="bottom|end" />
+</RelativeLayout>

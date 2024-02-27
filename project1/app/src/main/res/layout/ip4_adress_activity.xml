@@ -1,0 +1,42 @@
+<!-- res/layout/activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F2F2F2">
+
+    <TextView
+        android:id="@+id/textViewLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your IPv4 Address of WiFi"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextIpAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter IPv4 Address"
+        android:inputType="text"
+        android:background="#FFFFFF"
+        android:layout_below="@id/textViewLabel"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:background="#4285F4"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/editTextIpAddress"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+</RelativeLayout>

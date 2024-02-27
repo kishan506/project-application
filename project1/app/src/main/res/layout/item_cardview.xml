@@ -1,0 +1,78 @@
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/cardview_shadow_end_color"
+        android:padding="16dp">
+
+        <!-- Left Section for Title and Description -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Title TextView with Bold Text, Larger Font Size, and Dark Color -->
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+
+                android:textColor="#1A1A1A"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <!-- Description TextView with Slightly Larger Font Size -->
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:maxLines="3"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!-- Right Section for Start Date and End Date -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Start Date TextView in Leaf Green Color and Larger Font Size -->
+            <TextView
+                android:id="@+id/textViewStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#3DB63D"
+                android:gravity="end"
+                android:layout_marginTop="5dp" />
+
+            <!-- End Date TextView in Red Color and Larger Font Size -->
+            <TextView
+                android:id="@+id/textViewEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#FF0000"
+                android:gravity="end"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
