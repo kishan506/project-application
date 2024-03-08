@@ -1,0 +1,51 @@
+<!-- res/layout/fragment_forgot_password.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Register Phone Number"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edit_text_border"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/buttonCheckPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearOtpFields"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</RelativeLayout>

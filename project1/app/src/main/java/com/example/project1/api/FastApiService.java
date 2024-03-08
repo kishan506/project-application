@@ -2,6 +2,7 @@ package com.example.project1.api;
 
 import com.example.project1.model.Card;
 import com.example.project1.model.LoginResponse;
+import com.example.project1.model.NewPassword;
 import com.example.project1.model.Task;
 import com.example.project1.model.User;
 import com.example.project1.model.UserDTO;
@@ -47,6 +48,11 @@ public interface FastApiService {
             @Path("task_id") int task_Id,
             @Query("owner_id") int owner_Id
     );
+    @POST("/password")
+    Call<String> reset_request(@Path("Email") String Email);
+
+    @PUT("/reset_password")
+    Call<NewPassword> resetPassword(@Body NewPassword newPassword);
 //    @POST("add_task") // Endpoint path relative to the base URL
 //    Call<Response<ResponseBody>> registerUser(@Body User user);
 }

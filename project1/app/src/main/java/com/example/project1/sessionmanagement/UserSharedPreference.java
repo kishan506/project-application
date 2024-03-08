@@ -4,15 +4,26 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.project1.activites.LoginActivity;
+import com.example.project1.activites.PhoneValidationActivity;
+import com.example.project1.activites.ResetPasswordActivity;
 
 public class UserSharedPreference {
     Context context;
     String IP;
-    public UserSharedPreference(AppCompatActivity context)
+    public UserSharedPreference(LoginActivity context)
     {
         this.context = context;
     }
+    public UserSharedPreference(ResetPasswordActivity context)
+    {
+        this.context = context;
+    }
+    public UserSharedPreference(PhoneValidationActivity context)
+    {
+        this.context = context;
+    }
+
     public void addUserDetails(int user_id) {
         Log.d("from pref",user_id+"");
         SharedPreferences sh = context.getSharedPreferences("MySharedPref", context.MODE_PRIVATE);

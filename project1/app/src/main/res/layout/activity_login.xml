@@ -2,15 +2,15 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
- >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_width="379dp"
+        android:layout_height="591dp"
+        android:layout_centerInParent="true"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical">
 
@@ -18,24 +18,22 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_launcher_foreground"
-            android:layout_marginBottom="32dp"/>
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/ic_launcher_foreground" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutEmail"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-           >
+            android:layout_marginBottom="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
-
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -43,15 +41,14 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-           >
+            android:layout_marginBottom="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -59,17 +56,26 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Login" />
 
         <Button
             android:id="@+id/buttonRegister"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register"
             android:layout_marginTop="16dp"
-            android:textColor="@color/colorPrimary"/>
+            android:text="Register"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textViewForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Forgot Password?"
+            android:textColor="@color/colorPrimary" />
     </LinearLayout>
 </RelativeLayout>

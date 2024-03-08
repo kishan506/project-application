@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="userNameTextView" type="id" />
+    <item name="recyclerViewChat" type="id" />
+    <item name="layoutMessageInput" type="id" />
+    <item name="editTextMessage" type="id" />
+    <item name="buttonSend" type="id" />
+    <item name="textViewMessage" type="id" />
 </resources>

@@ -16,13 +16,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.project1.R;
+import com.example.project1.ShowUserListActivity;
 import com.example.project1.api.FastApiService;
 import com.example.project1.model.Card;
 import com.example.project1.model.Task;
 import com.example.project1.model.TempUser;
 import com.example.project1.sessionmanagement.UserSharedPreference;
-import com.example.project1.ShowUserListActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -42,7 +43,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class UpdateTaskActivity extends AppCompatActivity {
-
+    FirebaseAuth mAuth;
     private int REQUEST_CODE = 1;
     private EditText editTextTitle;
     private EditText editTextDescription;
@@ -62,9 +63,16 @@ public class UpdateTaskActivity extends AppCompatActivity {
     int taskStatus = 0;
     public String startDateString1,endDateString1;
     @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updatetask);
+
         UserSharedPreference sh = new UserSharedPreference(this);
         owner_id = sh.getUserDetails();
 //        FloatingActionButton fabChat = findViewById(R.id.fabChat);
@@ -100,7 +108,7 @@ public class UpdateTaskActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to the ChatActivity when the FAB is clicked
-                Intent chatIntent = new Intent(UpdateTaskActivity.this, ChatActivity.class);
+                Intent chatIntent = new Intent(UpdateTaskActivity.this,com.example.project1.activites.ChatActivity.class);
                 startActivity(chatIntent);
             }
         });

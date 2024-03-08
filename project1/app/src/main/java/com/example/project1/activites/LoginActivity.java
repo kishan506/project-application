@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -63,7 +64,15 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        TextView textViewForgotPassword = findViewById(R.id.textViewForgotPassword);
+        textViewForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the ForgotPasswordActivity
+                Intent intent = new Intent(LoginActivity.this, com.example.project1.activities.PhoneValidationActivity.class);
+                startActivity(intent);
+            }
+        });
         UserSharedPreference sh = new UserSharedPreference(this);
         if(sh.getUserDetails()!=0)
         {
@@ -101,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
                             .client(clientBuilder.build())
                             .addConverterFactory(GsonConverterFactory.create())
                             .build();
-
+                    Log.d("api", "onClick: "+sh.getIP());
                     FastApiService fastApiService = retrofit.create(FastApiService.class);
 
                     UserDTO userDTO = new UserDTO(email,password);
@@ -121,6 +130,7 @@ public class LoginActivity extends AppCompatActivity {
                             } else {
                                 showToast("Login failed. Please try again.");
                             }
+
                         }
 
                         @Override
@@ -132,6 +142,7 @@ public class LoginActivity extends AppCompatActivity {
                     
                 }
             }
+
         });
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {

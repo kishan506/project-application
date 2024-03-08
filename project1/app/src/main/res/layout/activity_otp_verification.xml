@@ -1,0 +1,78 @@
+<!-- res/layout/activity_otp_verification.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true">
+
+    <!-- Header Text -->
+    <TextView
+        android:id="@+id/textViewVerifyOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify your OTP:"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- OTP Fields -->
+    <LinearLayout
+        android:id="@+id/linearOtpFields"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textViewVerifyOtp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/editTextOtp1"
+            style="@style/OtpEditText"
+            android:inputType="number"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextOtp2"
+            style="@style/OtpEditText"
+            android:inputType="number"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextOtp3"
+            style="@style/OtpEditText"
+            android:inputType="number"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextOtp4"
+            style="@style/OtpEditText"
+            android:inputType="number"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextOtp5"
+            style="@style/OtpEditText"
+            android:inputType="number"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextOtp6"
+            style="@style/OtpEditText"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <!-- Verify Button -->
+    <Button
+        android:id="@+id/buttonVerifyOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/linearOtpFields"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Progress Bar (initially invisible) -->
+
+</RelativeLayout>

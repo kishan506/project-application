@@ -1,0 +1,17 @@
+<!-- res/drawable/bg_rounded_corners.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="16dp" />
+    <gradient
+        android:startColor="#FF6F61"
+        android:endColor="#FFC300"
+        android:type="radial"
+        android:centerX="0.5"
+        android:centerY="0.5"
+        android:gradientRadius="1"
+        android:angle="45" />
+    <padding android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp" />
+    <stroke android:color="#FFA07A" android:width="1dp"/>
+</shape>
